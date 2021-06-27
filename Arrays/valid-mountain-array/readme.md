@@ -1,4 +1,3 @@
-# Find The Duplicate Number
 
 # Problem Statement
 ===================
@@ -16,3 +15,25 @@ arr[i] > arr[i + 1] > ... > arr[arr.length - 1]
 ================
 
 https://leetcode.com/problems/valid-mountain-array/
+
+# CODE
+================
+```
+def validMountainArray(A):
+    N = len(A)
+    i = 0
+
+    # walk up
+    while i+1 < N and A[i] < A[i+1]:
+        i += 1
+
+    # peak can't be first or last
+    if i == 0 or i == N-1:
+        return False
+
+    # walk down
+    while i+1 < N and A[i] > A[i+1]:
+        i += 1
+
+    return i == N-1
+```

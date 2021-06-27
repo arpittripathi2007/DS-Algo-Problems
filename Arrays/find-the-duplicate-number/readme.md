@@ -1,4 +1,4 @@
-# Find The Duplicate Number
+
 
 # Problem Statement
 ===================
@@ -13,3 +13,26 @@ You must solve the problem without modifying the array nums and uses only consta
 ================
 
 https://leetcode.com/problems/find-the-duplicate-number/
+
+
+# CODE
+================
+```
+def findDuplicate(nums):
+    slow = nums[0]
+    fast = nums[0]
+
+    slow = nums[slow]
+    fast = nums[nums[fast]]
+    while(slow != fast):
+        slow = nums[slow]
+        fast = nums[nums[fast]]
+   
+    fast = nums[0]
+    while(slow != fast):
+        slow = nums[slow]
+        fast = nums[fast]
+    
+    return slow
+    
+```
