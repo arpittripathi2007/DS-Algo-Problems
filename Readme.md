@@ -1,5 +1,10 @@
-# DS ALGO Python Solutions
+# DS ALGO Python Concepts and Solutions
 ## Table of contents
-* ARRAYS
-* MATHS
-* STRINGS
+* Concepts
+    * Linked List
+    * Doubly Linked List
+
+* Problems
+    * ARRAYS
+    * MATHS
+    * STRINGS
