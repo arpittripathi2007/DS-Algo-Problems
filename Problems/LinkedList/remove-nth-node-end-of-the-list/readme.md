@@ -26,7 +26,7 @@ https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 ================
 
 ```
-def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
+def removeNthFromEnd(head: ListNode, n: int) -> ListNode:
     dummy_node = ListNode(0)
     dummy_node.next = head
     slow = dummy_node

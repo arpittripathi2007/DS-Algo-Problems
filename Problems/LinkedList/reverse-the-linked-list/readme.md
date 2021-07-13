@@ -19,7 +19,7 @@ https://leetcode.com/problems/reverse-linked-list/
 ================
 
 ```
-def reverseList(self, head: ListNode) -> ListNode:
+def reverseList(head: ListNode) -> ListNode:
     prev_node = None
     head_ = None
     while head is not None:
