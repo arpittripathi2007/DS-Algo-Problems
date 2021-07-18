@@ -1,6 +1,6 @@
 
 
-# LINKED LIST
+# Binary Search
 ===================
 
 ## Time Complexity
