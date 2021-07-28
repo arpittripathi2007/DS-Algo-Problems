@@ -1,14 +1,13 @@
-def twoSum(numbers, target):
-    first = 0
-    end = len(numbers)-1
+from typing import List
+
+def twoSum(nums: List[int], target: int) -> List[int]:
+    visited_key = {}
     
-    while(first < end):
-        if(numbers[first]+numbers[end])< target:
-            first += 1
-        elif(numbers[first]+numbers[end] > target):
-            end -= 1
+    for index, item in enumerate(nums):
+        if target-item in visited_key:
+            return [visited_key[target-item], index]
         else:
-            return [first+1, end+1]
+            visited_key[item] = index
     
 if __name__ == "__main__":
     numbers = [2,7,11,15]

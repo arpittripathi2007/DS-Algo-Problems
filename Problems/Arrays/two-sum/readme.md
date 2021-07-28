@@ -3,38 +3,37 @@
 # Problem Statement
 ===================
 
-Given an array of integers numbers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number.
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
-Return the indices of the two numbers (1-indexed) as an integer array answer of size 2, where 1 <= answer[0] < answer[1] <= numbers.length.
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
 
-The tests are generated such that there is exactly one solution. You may not use the same element twice.
-
+You can return the answer in any order.
  
 
 Example 1:
+Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Output: Because nums[0] + nums[1] == 9, we return [0, 1].
 
-Input: numbers = [2,7,11,15], target = 9
+Example 2:
+Input: nums = [3,2,4], target = 6
 Output: [1,2]
-Explanation: The sum of 2 and 7 is 9. Therefore index1 = 1, index2 = 2.
 
 # URL
 ================
 
-https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
+https://leetcode.com/problems/two-sum/
 
 # CODE
 ================
 
 ```
-def twoSum(numbers, target):
-    first = 0
-    end = len(numbers)-1
+def twoSum(self, nums: List[int], target: int) -> List[int]:
+    visited_key = {}
     
-    while(first < end):
-        if(numbers[first]+numbers[end])< target:
-            first += 1
-        elif(numbers[first]+numbers[end] > target):
-            end -= 1
+    for index, item in enumerate(nums):
+        if target-item in visited_key:
+            return [visited_key[target-item], index]
         else:
-            return [first+1, end+1]
+            visited_key[item] = index
 ```
