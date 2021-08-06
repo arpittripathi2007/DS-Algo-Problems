@@ -2,7 +2,7 @@ def removeDuplicates(nums):
     count_a = len(nums)
     point_1 = 0
     point_2 = 0
-    while(point_2< count_a):
+    while(point_2<  ):
         if(nums[point_1] == nums[point_2]):
             point_2 += 1
         else:
